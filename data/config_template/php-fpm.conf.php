@@ -49,7 +49,7 @@ php_admin_value[error_log] = ${'php.errorlog.directory'}/\$pool-error.log
 
 security.limit_extensions = .php
 
-include = ${'intahwebz.root.directory'}/autogen/intahwebz.php.fpm.ini
+include = ${'intahwebz.root.directory'}/autogen/php.fpm.ini
 
 END;
 

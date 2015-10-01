@@ -7,4 +7,4 @@ find . -name "*.sh" -exec chmod 755 {} \;
 
 su intahwebz -c "./scripts/deployAsUser.sh ${environment}"
 
-sh ./autogen/addIntahwebzConfig.sh
+sh ./autogen/addConfig.sh

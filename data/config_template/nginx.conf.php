@@ -25,7 +25,7 @@ server {
     access_log  ${'nginx.log.directory'}/intahwebz.access.log;
     error_log  ${'nginx.log.directory'}/intahwebz.error.log;
 
-    root ${'intahwebz.root.directory'}/intahwebz;
+    root ${'intahwebz.root.directory'}/public;
 
     client_max_body_size 1m;
     
@@ -69,7 +69,7 @@ server {
         allow 127.0.0.1;
         deny all;
         fastcgi_param  QUERY_STRING       \$query_string;
-        include       ${'intahwebz.root.directory'}/data/config/fastcgi.conf;
+        include       ${'intahwebz.root.directory'}/data/config_template/fastcgi.conf;
         fastcgi_pass   unix:${'phpfpm.socket.directory'}/php-fpm-intahwebz.sock;
     }
 
@@ -77,7 +77,7 @@ server {
         try_files \$uri /index.php =404;
         fastcgi_param  QUERY_STRING  \$query_string;
         fastcgi_pass   unix:${'phpfpm.socket.directory'}/php-fpm-intahwebz.sock;
-        include       ${'intahwebz.root.directory'}/data/config/fastcgi.conf;
+        include       ${'intahwebz.root.directory'}/data/config_template/fastcgi.conf;
     }
 }
 

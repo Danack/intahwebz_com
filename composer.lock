@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "28a7236c70fe32eca7736b0df4b539d5",
+    "hash": "729187d5e6bac2373963634f1306ebcf",
     "packages": [
         {
             "name": "amphp/amp",
@@ -284,6 +284,55 @@
                 "view"
             ],
             "time": "2015-08-22 23:19:33"
+        },
+        {
+            "name": "danack/tier",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Danack/Tier.git",
+                "reference": "f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Danack/Tier/zipball/f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc",
+                "reference": "f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc",
+                "shasum": ""
+            },
+            "require": {
+                "rdlowrey/auryn": "^1.0.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.1",
+                "phpunit/phpunit": "3.7.*",
+                "room11/caching": "^0.0.4",
+                "room11/http": "^0.0.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Tier": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com"
+                }
+            ],
+            "description": "An example of how to implement an application using DI with tiers",
+            "keywords": [
+                "application",
+                "auryn",
+                "di",
+                "example"
+            ],
+            "time": "2015-09-04 13:47:39"
         },
         {
             "name": "daverandom/libdns",
@@ -815,6 +864,95 @@
             ],
             "abandoned": "amphp/socket",
             "time": "2015-02-18 16:23:30"
+        },
+        {
+            "name": "room11/caching",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Danack/Caching.git",
+                "reference": "cdd0c2a8eacfb3af9badbb62d020910414bfb941"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Danack/Caching/zipball/cdd0c2a8eacfb3af9badbb62d020910414bfb941",
+                "reference": "cdd0c2a8eacfb3af9badbb62d020910414bfb941",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.5",
+                "rdlowrey/auryn": "^1.0.2",
+                "squizlabs/php_codesniffer": "^2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Room11\\Caching": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com"
+                }
+            ],
+            "description": "A set of interfaces and standard implementations to allow sweet sweet interoperability.",
+            "keywords": [
+                "caching",
+                "http",
+                "interface",
+                "room11"
+            ],
+            "time": "2015-08-22 20:09:34"
+        },
+        {
+            "name": "room11/http",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Danack/HTTP.git",
+                "reference": "d5084bdc536e72d1bfd6662f8d3bd806b335c7f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Danack/HTTP/zipball/d5084bdc536e72d1bfd6662f8d3bd806b335c7f6",
+                "reference": "d5084bdc536e72d1bfd6662f8d3bd806b335c7f6",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.5",
+                "rdlowrey/auryn": "^1.0.2",
+                "squizlabs/php_codesniffer": "^2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Room11\\HTTP": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com"
+                }
+            ],
+            "description": "A set of interfaces and standard implementations to allow sweet sweet interoperability.",
+            "keywords": [
+                "http",
+                "interface",
+                "room11"
+            ],
+            "time": "2015-08-22 14:15:09"
         }
     ],
     "packages-dev": [

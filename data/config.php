@@ -50,25 +50,24 @@ $centos = [
 $centos_guest = $centos;
 
 $live = [];
-$live[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.com';
+//$live[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.com';
 $live[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_EXISTS';
 $live[Config::SCRIPT_PACKING] = true;
 $live[Config::CACHING_SETTING] = 'caching.time';
 
-$live[Config::DOMAIN_CANONICAL] = 'phpimagick.com';
-$live[Config::DOMAIN_CDN_PATTERN] = 'phpimagick.test';
-$live[Config::DOMAIN_CDN_TOTAL] = 1;
+$live[Config::DOMAIN_CANONICAL] = 'intahwebz.com';
+//$live[Config::DOMAIN_CDN_TOTAL] = 1;
 
 
 $dev = [];
-$dev[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.test';
+//$dev[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.test';
 $dev[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_MTIME';
-$dev[Config::SCRIPT_PACKING] = false;
+//$dev[Config::SCRIPT_PACKING] = false;
 $dev[Config::CACHING_SETTING] = 'caching.revalidate';
 
-$dev[Config::DOMAIN_CANONICAL] = 'phpimagick.test';
-$dev[Config::DOMAIN_CDN_PATTERN] = 'phpimagick.test';
-$dev[Config::DOMAIN_CDN_TOTAL] = 1;
+$dev[Config::DOMAIN_CANONICAL] = 'intahwebz.com';
+//$dev[Config::DOMAIN_CDN_PATTERN] = 'phpimagick.test';
+//$dev[Config::DOMAIN_CDN_TOTAL] = 1;
 
 
 //$dev[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_EXISTS';
