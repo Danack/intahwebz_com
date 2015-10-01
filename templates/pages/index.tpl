@@ -48,9 +48,16 @@ You are surifng teh <span class='blink'>intahwebz</span>!1!
 
 	Though there's also a little <a href='/DynamicInheritance/index.php'>dynamic inheritance example here
     </a> -->
-    
 
 </p>
+
+<p>
+    {inject name='links' type='Intahwebz\Model\InterestingLinks'}
+    
+    Here are some maybe interesting links:<br/>
+    {$links->render() | nofilter}
+</p>
+
 
 DIE BLINKEN LICHT SCHON FUNKTIONIEREN WIRD
 </body>
