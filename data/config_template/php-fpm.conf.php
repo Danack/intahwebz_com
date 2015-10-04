@@ -8,19 +8,19 @@ $config = <<< END
 ;;;;;;;;;;;;;;;;;;;;
 
 ; Start a new pool named 'www'.
-[intahwebz]
+[${'app_name'}]
 
 ; Unix user/group of processes
-user = intahwebz
-group = ${'phpfpm.group'}
+user = ${'app_name'}
+group = ${'phpfpm_group'}
 
-listen = ${'phpfpm.socket.directory'}/php-fpm-intahwebz.sock
+listen = ${'phpfpm_socket_directory'}/php-fpm-${'app_name'}.sock
 
 ; List of ipv4 addresses of FastCGI clients which are allowed to connect.
 listen.allowed_clients = 127.0.0.1
 
 listen.owner = intahwebz
-listen.group = ${'phpfpm.group'}
+listen.group = ${'phpfpm_group'}
 listen.mode = 0664
 
 ; Per pool prefix
@@ -28,7 +28,7 @@ listen.mode = 0664
 ;prefix = \$pool
 
 request_slowlog_timeout = 10
-slowlog = ${'php.log.directory'}/slow.\$pool.log
+slowlog = ${'php_log_directory'}/slow.\$pool.log
 
 request_terminate_timeout=500
 
@@ -44,12 +44,12 @@ pm.max_requests = 5000
 pm.status_path = /www-status
 
 ; Additional php.ini defines
-php_admin_value[memory_limit] = ${'phpfpm.www.maxmemory'}
-php_admin_value[error_log] = ${'php.errorlog.directory'}/\$pool-error.log
+php_admin_value[memory_limit] = ${'phpfpm_www_maxmemory'}
+php_admin_value[error_log] = ${'php_errorlog_directory'}/\$pool-error.log
 
 security.limit_extensions = .php
 
-include = ${'intahwebz.root.directory'}/autogen/php.fpm.ini
+include = ${'app_root_directory'}/autogen/php.fpm.ini
 
 END;
 

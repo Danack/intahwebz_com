@@ -3,73 +3,82 @@
 // This is a sample configuration file
 
 use Intahwebz\Config;
-
-$socketDir = '/var/run/php-fpm';
+use Configurator\ConfiguratorException;
+use Jig\Jig;
+use Room11\Caching\LastModifiedStrategy;
 
 $default = [
-    //global/default variables go here.
-    'nginx.sendFile' => 'off',
-    'mysql.charset' => 'utf8mb4',
-    'mysql.collation' => 'utf8mb4_unicode_ci',
+    'app_name' => 'intahwebz',
+    'app_sitename' => 'intahwebz',
+    'nginx_sendFile' => 'off',
+    Config::SCRIPT_VERSION => date('jmyhis')
 ];
 
 
-$default[Config::SCRIPT_VERSION] = date('jmyhis');
+$live = [];
+$dev = [];
+
+$live['nginx_sendFile'] = 'on';
+
+
+// What cache setting to use for assets
+$live[Config::CACHING_SETTING] = LastModifiedStrategy::CACHING_TIME;;
+$dev[Config::CACHING_SETTING] = LastModifiedStrategy::CACHING_REVALIDATE;
+
+// Whether JS/CSS should be served packed together.
+$live[Config::SCRIPT_PACKING] = true;
+$live[Config::SCRIPT_PACKING] = false;
+
+// What domain to use to generate absolute links
+$live[Config::DOMAIN_CANONICAL] = 'intahwebz.com';
+$dev[Config::DOMAIN_CANONICAL] = 'intahwebz.test';
+
+
+// Whether to recompile Jig templates 
+$dev[Config::JIG_COMPILE_CHECK] = Jig::COMPILE_CHECK_MTIME;
+$live[Config::JIG_COMPILE_CHECK] = Jig::COMPILE_CHECK_EXISTS;
+
+
+$evaluate = function ($config, $environment) {
+    if (array_key_exists('app_name', $config) == false) {
+        throw new ConfiguratorException("app.name isn't set for environment '$environment'.");
+    }
+    
+    if (array_key_exists('phpfpm_socket_directory', $config) == false) {
+        throw new ConfiguratorException("phpfpm_socket_directory isn't set for environment '$environment'.");
+    }
+
+    $phpfpm_socket_directory = $config['phpfpm_socket_directory'];
+    $app_name = $config['app_name'];
+
+    return [
+        'phpfpm_socket_fullpath' => "$phpfpm_socket_directory/php-fpm-$app_name.sock"
+    ]; 
+};
 
 
 $centos = [
-    'nginx.log.directory' => '/var/log/nginx',
-    'nginx.root.directory' => '/usr/share/nginx',
-    'nginx.conf.directory' => '/etc/nginx',
-    'nginx.run.directory ' => '/var/run',
-    'nginx.user' => 'nginx',
-    'nginx.sendFile' => 'on',
+    'nginx_log_directory' => '/var/log/nginx',
+    'nginx_root_directory' => '/usr/share/nginx',
+    'nginx_conf_directory' => '/etc/nginx',
+    'nginx_run_directory ' => '/var/run',
+    'nginx_user' => 'nginx',
+    'nginx_sendFile' => 'on',
     
-    'intahwebz.root.directory' => dirname(__DIR__),
+    'app_root_directory' => dirname(__DIR__),
     
-    'phpfpm.www.maxmemory' => '16M',
-    'phpfpm.images.maxmemory' => '48M',
-    'phpfpm.user' => 'intahwebz',
-    'phpfpm.group' => 'www-data',
-    'phpfpm.socket.directory' => $socketDir,
-    'phpfpm.conf.directory' => '/etc/php-fpm.d',
-    'phpfpm.pid.directory' => '/var/run/php-fpm',
-    'phpfpm.fullsocketpath' => $socketDir."/php-fpm-imagickdemos-".basename(dirname(__DIR__)).".sock",
+    'phpfpm_www_maxmemory' => '16M',
+    'phpfpm_user' => 'intahwebz',
+    'phpfpm_group' => 'www-data',
+    'phpfpm_socket_directory' => '/var/run/php-fpm',
+    'phpfpm_conf_directory' => '/etc/php-fpm.d',
+    'phpfpm_pid_directory' => '/var/run/php-fpm',
 
-    'php.conf.directory' => '/etc/php',
-    'php.log.directory' => '/var/log/php',
-    'php.errorlog.directory' => '/var/log/php',
-    'php.session.directory' => '/var/lib/php/session',
-    
-    'mysql.casetablenames' => '0',
-    'mysql.datadir' => '/var/lib/mysql',
-    'mysql.socket' => '/var/lib/mysql/mysql.sock',
-    'mysql.log.directory' => '/var/log',
+    'php_conf_directory' => '/etc/php',
+    'php_log_directory' => '/var/log/php',
+    'php_errorlog_directory' => '/var/log/php',
+    'php_session_directory' => '/var/lib/php/session',
 ];
 
+// Duplicate the environment for my local dev.
 $centos_guest = $centos;
-
-$live = [];
-//$live[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.com';
-$live[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_EXISTS';
-$live[Config::SCRIPT_PACKING] = true;
-$live[Config::CACHING_SETTING] = 'caching.time';
-
-$live[Config::DOMAIN_CANONICAL] = 'intahwebz.com';
-//$live[Config::DOMAIN_CDN_TOTAL] = 1;
-
-
-$dev = [];
-//$dev[Config::LIBRATO_STATSSOURCENAME] = 'phpimagick.test';
-$dev[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_MTIME';
-//$dev[Config::SCRIPT_PACKING] = false;
-$dev[Config::CACHING_SETTING] = 'caching.revalidate';
-
-$dev[Config::DOMAIN_CANONICAL] = 'intahwebz.com';
-//$dev[Config::DOMAIN_CDN_PATTERN] = 'phpimagick.test';
-//$dev[Config::DOMAIN_CDN_TOTAL] = 1;
-
-
-//$dev[Config::JIG_COMPILE_CHECK] = 'COMPILE_CHECK_EXISTS';
-//$dev[Config::SCRIPT_PACKING] = true;
-//$dev[Config::CACHING_SETTING] = 'caching.revalidate';

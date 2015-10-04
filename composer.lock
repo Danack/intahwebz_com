@@ -4,177 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "729187d5e6bac2373963634f1306ebcf",
+    "hash": "e3927f35d0d6374a79448e2fe6586d72",
     "packages": [
-        {
-            "name": "amphp/amp",
-            "version": "v0.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amphp/amp.git",
-                "reference": "446e09a95d8fe5d4368802f7b126095c5e54415c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/446e09a95d8fe5d4368802f7b126095c5e54415c",
-                "reference": "446e09a95d8fe5d4368802f7b126095c5e54415c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "suggest": {
-                "pecl/libevent": "Extension for libevent backends (high performance use cases).",
-                "php-uv": "Extension for libuv backends (high performance use cases)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Amp\\": "lib/"
-                },
-                "files": [
-                    "lib/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@php.net",
-                    "role": "Creator / Lead Developer"
-                }
-            ],
-            "description": "A non-blocking concurrency framework for PHP applications",
-            "homepage": "https://github.com/amphp/amp",
-            "keywords": [
-                "async",
-                "concurrency",
-                "future",
-                "libevent",
-                "libuv",
-                "non-blocking",
-                "promise"
-            ],
-            "time": "2015-02-18 14:59:48"
-        },
-        {
-            "name": "amphp/artax",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amphp/artax.git",
-                "reference": "f8da6090dd971d767f184fb07471eb9841533fd9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amphp/artax/zipball/f8da6090dd971d767f184fb07471eb9841533fd9",
-                "reference": "f8da6090dd971d767f184fb07471eb9841533fd9",
-                "shasum": ""
-            },
-            "require": {
-                "amphp/amp": "~0.16.0",
-                "php": ">=5.4.0",
-                "rdlowrey/nbsock": "~0.6.0"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "~1.9",
-                "phpunit/phpunit": "^4.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Amp\\Artax\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@gmail.com",
-                    "role": "Creator / Lead Developer"
-                }
-            ],
-            "description": "Asynchronous parallel HTTP/1.1 client built on the Amp concurrency framework",
-            "homepage": "https://github.com/amphp/artax",
-            "keywords": [
-                "async",
-                "client",
-                "http",
-                "non-blocking",
-                "parallel",
-                "rest"
-            ],
-            "time": "2015-09-11 20:55:45"
-        },
-        {
-            "name": "amphp/dns",
-            "version": "v0.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amphp/dns.git",
-                "reference": "e4578f504a855078b339e3a4d6da7f4e1f8f4723"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amphp/dns/zipball/e4578f504a855078b339e3a4d6da7f4e1f8f4723",
-                "reference": "e4578f504a855078b339e3a4d6da7f4e1f8f4723",
-                "shasum": ""
-            },
-            "require": {
-                "amphp/amp": "~0.16.0",
-                "daverandom/libdns": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": ">=0.9.1",
-                "phpunit/phpunit": "~4.1.0",
-                "predis/predis": "~0.8.6",
-                "rdlowrey/auryn": ">=0.13.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Amp\\Dns\\": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Wright",
-                    "email": "addr@daverandom.com",
-                    "role": "Creator / Lead Developer"
-                }
-            ],
-            "description": "Asynchronous DNS resolution built on the Amp concurrency framework",
-            "homepage": "https://github.com/amphp/dns",
-            "keywords": [
-                "amp",
-                "async",
-                "client",
-                "dns",
-                "resolve"
-            ],
-            "time": "2015-02-18 16:18:40"
-        },
         {
             "name": "danack/console",
             "version": "v2.6.1",
@@ -335,39 +166,6 @@
             "time": "2015-09-04 13:47:39"
         },
         {
-            "name": "daverandom/libdns",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DaveRandom/LibDNS.git",
-                "reference": "e935e8caa5ff30122bcbeb8b4ce567fa14cdf063"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DaveRandom/LibDNS/zipball/e935e8caa5ff30122bcbeb8b4ce567fa14cdf063",
-                "reference": "e935e8caa5ff30122bcbeb8b4ce567fa14cdf063",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LibDNS\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "DNS protocol implementation written in pure PHP",
-            "keywords": [
-                "dns"
-            ],
-            "time": "2015-04-02 15:42:15"
-        },
-        {
             "name": "intahwebz/configurator",
             "version": "0.2.8",
             "source": {
@@ -517,44 +315,6 @@
             "time": "2014-08-12 22:41:53"
         },
         {
-            "name": "mikey179/vfsStream",
-            "version": "v1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "61b12172292cf539685507aa65b076c1530e83c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/61b12172292cf539685507aa65b076c1530e83c1",
-                "reference": "61b12172292cf539685507aa65b076c1530e83c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "org\\bovigo\\vfs\\": "src/main/php"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "homepage": "http://vfs.bovigo.org/",
-            "time": "2014-09-14 10:18:53"
-        },
-        {
             "name": "nikic/fast-route",
             "version": "v0.3.0",
             "source": {
@@ -702,56 +462,6 @@
             "time": "2014-03-17 04:51:51"
         },
         {
-            "name": "predis/predis",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nrk/predis.git",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/84060b9034d756b4d79641667d7f9efe1aeb8e04",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Allows access to Webdis when paired with phpiredis",
-                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Predis\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniele Alessandri",
-                    "email": "suppakilla@gmail.com",
-                    "homepage": "http://clorophilla.net"
-                }
-            ],
-            "description": "Flexible and feature-complete PHP client library for Redis",
-            "homepage": "http://github.com/nrk/predis",
-            "keywords": [
-                "nosql",
-                "predis",
-                "redis"
-            ],
-            "time": "2015-07-30 18:34:15"
-        },
-        {
             "name": "rdlowrey/auryn",
             "version": "1.1.0",
             "source": {
@@ -811,59 +521,6 @@
                 "ioc"
             ],
             "time": "2015-08-26 16:31:48"
-        },
-        {
-            "name": "rdlowrey/nbsock",
-            "version": "v0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rdlowrey/nbsock.git",
-                "reference": "a13e3f22a3446311a69ab7e4b128c07711db508a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rdlowrey/nbsock/zipball/a13e3f22a3446311a69ab7e4b128c07711db508a",
-                "reference": "a13e3f22a3446311a69ab7e4b128c07711db508a",
-                "shasum": ""
-            },
-            "require": {
-                "amphp/amp": "~0.16.0",
-                "amphp/dns": "~0.4.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nbsock\\": "lib/"
-                },
-                "files": [
-                    "lib/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@gmail.com",
-                    "role": "Creator / Lead Developer"
-                }
-            ],
-            "description": "Non-blocking socket connection/encryption using the Amp concurrency framework",
-            "homepage": "https://github.com/rdlowrey/nbsock",
-            "keywords": [
-                "amp",
-                "async",
-                "encryption",
-                "non-blocking",
-                "sockets",
-                "tcp",
-                "tls"
-            ],
-            "abandoned": "amphp/socket",
-            "time": "2015-02-18 16:23:30"
         },
         {
             "name": "room11/caching",
@@ -1388,16 +1045,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.7",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
@@ -1440,7 +1097,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-19 09:14:08"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "sebastian/comparator",

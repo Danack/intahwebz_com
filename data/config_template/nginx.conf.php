@@ -20,12 +20,12 @@ server {
 
     listen 80;
     # listen 8080;
-    server_name intahwebz.test intahwebz.com www.intahwebz.com;
+    server_name ${'app_sitename'}.test ${'app_sitename'}.com www.${'app_sitename'}.com;
 
-    access_log  ${'nginx.log.directory'}/intahwebz.access.log;
-    error_log  ${'nginx.log.directory'}/intahwebz.error.log;
+    access_log  ${'nginx_log_directory'}/intahwebz.access.log;
+    error_log  ${'nginx_log_directory'}/intahwebz.error.log;
 
-    root ${'intahwebz.root.directory'}/public;
+    root ${'app_root_directory'}/public;
 
     client_max_body_size 1m;
     
@@ -69,15 +69,15 @@ server {
         allow 127.0.0.1;
         deny all;
         fastcgi_param  QUERY_STRING       \$query_string;
-        include       ${'intahwebz.root.directory'}/data/config_template/fastcgi.conf;
-        fastcgi_pass   unix:${'phpfpm.socket.directory'}/php-fpm-intahwebz.sock;
+        include       ${'app_root_directory'}/data/config_template/fastcgi.conf;
+        fastcgi_pass   unix:${'phpfpm_socket_directory'}/php-fpm-${'app_name'}.sock;
     }
 
     location  / {
         try_files \$uri /index.php =404;
         fastcgi_param  QUERY_STRING  \$query_string;
-        fastcgi_pass   unix:${'phpfpm.socket.directory'}/php-fpm-intahwebz.sock;
-        include       ${'intahwebz.root.directory'}/data/config_template/fastcgi.conf;
+        fastcgi_pass   unix:${'phpfpm_socket_directory'}/php-fpm-${'app_name'}.sock;
+        include       ${'app_root_directory'}/data/config_template/fastcgi.conf;
     }
 }
 
