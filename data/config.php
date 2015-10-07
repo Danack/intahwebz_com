@@ -38,7 +38,6 @@ $dev[Config::DOMAIN_CANONICAL] = 'intahwebz.test';
 $dev[Config::JIG_COMPILE_CHECK] = Jig::COMPILE_CHECK_MTIME;
 $live[Config::JIG_COMPILE_CHECK] = Jig::COMPILE_CHECK_EXISTS;
 
-
 $evaluate = function ($config, $environment) {
     if (array_key_exists('app_name', $config) == false) {
         throw new ConfiguratorException("app.name isn't set for environment '$environment'.");
@@ -68,7 +67,7 @@ $centos = [
     'app_root_directory' => dirname(__DIR__),
     
     'phpfpm_www_maxmemory' => '16M',
-    'phpfpm_user' => 'intahwebz',
+    //'phpfpm_user' => $app_name,
     'phpfpm_group' => 'www-data',
     'phpfpm_socket_directory' => '/var/run/php-fpm',
     'phpfpm_conf_directory' => '/etc/php-fpm.d',

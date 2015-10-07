@@ -19,7 +19,7 @@ listen = ${'phpfpm_socket_directory'}/php-fpm-${'app_name'}.sock
 ; List of ipv4 addresses of FastCGI clients which are allowed to connect.
 listen.allowed_clients = 127.0.0.1
 
-listen.owner = intahwebz
+listen.owner = ${'app_name'}
 listen.group = ${'phpfpm_group'}
 listen.mode = 0664
 
