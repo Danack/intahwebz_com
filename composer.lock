@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3927f35d0d6374a79448e2fe6586d72",
+    "hash": "8eee592074114a87b1dea0669053c231",
     "packages": [
         {
             "name": "danack/console",
@@ -167,16 +167,16 @@
         },
         {
             "name": "intahwebz/configurator",
-            "version": "0.2.8",
+            "version": "0.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Danack/Configurator.git",
-                "reference": "ac3a233efec6c74c9da58c759abe7517cf43b29d"
+                "reference": "2812ad69c933cb9fa438c4b5fa842b15fb3e4e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Danack/Configurator/zipball/ac3a233efec6c74c9da58c759abe7517cf43b29d",
-                "reference": "ac3a233efec6c74c9da58c759abe7517cf43b29d",
+                "url": "https://api.github.com/repos/Danack/Configurator/zipball/2812ad69c933cb9fa438c4b5fa842b15fb3e4e52",
+                "reference": "2812ad69c933cb9fa438c4b5fa842b15fb3e4e52",
                 "shasum": ""
             },
             "require": {
@@ -212,11 +212,13 @@
             "description": "Generates config files from PHP based config files and PHP and JSON data files.",
             "keywords": [
                 "config",
+                "configuration",
+                "environment",
                 "php",
                 "tool",
                 "utf-8"
             ],
-            "time": "2015-09-15 17:28:49"
+            "time": "2015-10-06 21:13:22"
         },
         {
             "name": "leafo/lessphp",
@@ -735,16 +737,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +795,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-14 06:51:16"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
