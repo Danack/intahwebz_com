@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8eee592074114a87b1dea0669053c231",
+    "hash": "c83983673456e1a657146de6e901d097",
     "packages": [
         {
             "name": "danack/console",
@@ -118,16 +118,16 @@
         },
         {
             "name": "danack/tier",
-            "version": "0.1.1",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Danack/Tier.git",
-                "reference": "f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc"
+                "reference": "95a0d9b8b846f729972efc1da1241476fa2f6b5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Danack/Tier/zipball/f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc",
-                "reference": "f4f156dc6ff0877b38bb47b9ffc175ea4f8bc2dc",
+                "url": "https://api.github.com/repos/Danack/Tier/zipball/95a0d9b8b846f729972efc1da1241476fa2f6b5f",
+                "reference": "95a0d9b8b846f729972efc1da1241476fa2f6b5f",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +163,7 @@
                 "di",
                 "example"
             ],
-            "time": "2015-09-04 13:47:39"
+            "time": "2015-10-08 12:49:50"
         },
         {
             "name": "intahwebz/configurator",

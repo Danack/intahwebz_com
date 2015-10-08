@@ -25,6 +25,9 @@ $tier = new Tier('routeRequest');
 // Create the Tier application
 $app = new TierApp($tier, $injectionParams);
 
+// The default exception handlers are good enough
+$app->setStandardExceptionHandlers();
+
 $request = \Tier\createRequestFromGlobals();
 
 // Run it
